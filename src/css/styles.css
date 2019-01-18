@@ -110,3 +110,6 @@ button:nth-child(odd){
 .contentBox{
     margin-left: 5%;
 }
+.contentBox img{
+    max-width: 100%;
+}

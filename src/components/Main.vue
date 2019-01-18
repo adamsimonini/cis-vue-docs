@@ -11,7 +11,7 @@
     
     </GuideSection>
     <GuideSection class="guideSection" title="Conditional Rendering">
-    
+      <ConditionalRendering slot="content" />
     </GuideSection>
     <GuideSection class="guideSection" title="Rendering List via Looping (v-for)">
 
@@ -23,12 +23,14 @@
 <script>
 import GuideSection from './GuideSection.vue';
 import TwoWayBinding from './TwoWayBinding.vue';
+import ConditionalRendering from './ConditionalRendering.vue';
 
 export default {
   name: 'Main',
   components: {
     GuideSection,
     TwoWayBinding,
+    ConditionalRendering,
   },  
   data: function(){
     return {
