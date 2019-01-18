@@ -1,7 +1,9 @@
 <template>
     <div class='guideSection'>
-        <h2>{{title}}</h2>
-        <slot name="content"></slot>
+        <h2 class="sectionTitle" @click="showContent()">{{title}}</h2>
+        <div v-show="(toggler) % 2 == 0">
+            <slot name="content"></slot>
+        </div>
     </div>
 </template>
 
@@ -11,9 +13,14 @@ export default {
   props: ['title'],
   data: function() {
       return {
-
+          toggler: 1,
       }
-  }
+  },
+  methods: {
+      showContent: function(){
+          this.toggler++;
+      }
+  },
 }
 </script>
 
@@ -29,5 +36,13 @@ export default {
 
 .guideSection section{
     margin-left: 5%;
+}
+.sectionTitle{
+    cursor: pointer;
+    user-select: none;
+}
+.sectionTitle:hover{
+    cursor: pointer;
+    color: purple;
 }
 </style>

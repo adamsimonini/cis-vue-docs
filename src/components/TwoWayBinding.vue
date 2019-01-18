@@ -4,7 +4,7 @@
           <p>v-on:click.prevent="myFunction" OR @click.prevent="myFunction" will stop the default action of the element and instead run the provided function. Check console logs.</p>
           <button style="" type="submit" @click.prevent="logThisInstead">Prevent my default</button>
           <h2>"Stop" modifier for halting event propagation (e.g., bubbling)</h2>
-          <p>Can help performance. Makes code more predictable. Three elements call function "logMe()" on click, but propagation is halted so it only runs twice due to ".stop". Check console logs.</p>
+          <p>Can help performance. Makes code more predictable. Three elements call function "logMe()" on click, but the click's propagation is halted due to ".stop". It only runs twice. Check console logs.</p>
           <section id="grandParent" @click="logMe()">
               <div id="parent" @click.stop="logMe()"> <!-- ".stop" will prevent grandParent from triggering its @click  -->
                   <button id="button"  @click="logMe()" style="">Click me</button>
