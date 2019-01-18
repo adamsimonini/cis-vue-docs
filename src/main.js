@@ -8,5 +8,8 @@ Vue.config.productionTip = false
 
 new Vue({
   render: h => h(App),
+  data: {
+    chart: '../assets/vue-modifiers.jpg',
+  }
 }).$mount('#app')
 

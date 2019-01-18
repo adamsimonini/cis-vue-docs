@@ -107,3 +107,6 @@ button:nth-child(odd){
 .countryName{
     font-weight: 900;
 }
+.contentBox{
+    margin-left: 5%;
+}

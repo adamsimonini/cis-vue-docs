@@ -1,7 +1,7 @@
 <template>
     <div class='guideSection'>
         <h2>{{title}}</h2>
-            <slot name="content"></slot>
+        <slot name="content"></slot>
     </div>
 </template>
 

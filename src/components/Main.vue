@@ -2,12 +2,20 @@
   <main id='main'>
     <h1>Advanced Vue Guidebook & Sandbox</h1>
     <GuideSection class="guideSection" title="Two-Way Binding">
-        <TwoWayBinding slot="content" />
+      <TwoWayBinding slot="content" />
     </GuideSection>
-    <GuideSection class="guideSection" title="Event Propagation" />
-    <GuideSection class="guideSection" title="Key & Mouse Modifiers" />
-    <GuideSection class="guideSection" title="Conditional Rendering" />
-    <GuideSection class="guideSection" title="Rendering List via Looping (v-for)" />
+    <GuideSection class="guideSection" title="Event Propagation">
+    
+    </GuideSection>
+    <GuideSection class="guideSection" title="Key & Mouse Modifiers">
+    
+    </GuideSection>
+    <GuideSection class="guideSection" title="Conditional Rendering">
+    
+    </GuideSection>
+    <GuideSection class="guideSection" title="Rendering List via Looping (v-for)">
+
+    </GuideSection>
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
   </main>
 </template>
