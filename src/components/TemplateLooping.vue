@@ -1,5 +1,14 @@
 <template>
     <div id="templateLooping" class="contentBox" slot="content">
+        <h3>Render Lists Via Looping (v-for)</h3>
+        <input type="number" v-model.number="listSize" @blur="generateList()" @enter="generateList()" placeholder="enter a number"/>
+        <br /><br />
+        <ol id="dynamicList" v-show="listSize > 0">
+            <li v-for="items in list">
+                <= list number | index number => {{num}}
+            </li>
+        </ol>
+
         <!-- v-for to generate HTML from an array of objects -->
         <p>An HTML element can be rendered via a loop by using "v-for". This allows us to write the template for the item once (e.g., ".fishBox" below).
             Then, we can loop through either an array or an object's properties from the component's data object. For arrays, the index can be accessed via an optional 
@@ -41,6 +50,9 @@ export default {
   props: [''],
   data: function() {
         return {
+            listSize: 0,
+            listNumber: 0,
+            list: [],
             fishes: [
                 {name: 'Goldfish', color: 'orange'},
                 {name: 'Deepwater Redfish', color: 'pink'},
@@ -67,11 +79,11 @@ export default {
         }
   },
   methods: {
-        logThisInstead: function(){
-            console.log("%c Form submission was successfully prevented, and THIS function was run, instead! :)", "color: limegreen;");
-        },
-        logMe: function(){
-            console.log(this);
+      generateList: function(){
+          for(var i=0; i < this.listSize; i++ ){
+              this.listNumber++;
+                this.list[i] = i;
+            }
         },
     }
 }
