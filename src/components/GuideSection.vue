@@ -1,17 +1,7 @@
 <template>
     <div class='guideSection'>
         <h2>{{title}}</h2>
-        <section>
-            <div class="guide-explanation">
-                <slot name="explanation"></slot>
-            </div>
-            <div class="guide-examples">
-                <slot name="examples"></slot>
-            </div>
-            <div class="guide-links">
-                <slot name="links"></slot>
-            </div>
-        </section>
+            <slot name="content"></slot>
     </div>
 </template>
 
