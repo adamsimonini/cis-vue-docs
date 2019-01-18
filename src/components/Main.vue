@@ -4,17 +4,17 @@
     <GuideSection class="guideSection" title="Two-Way Binding">
       <TwoWayBinding slot="content" />
     </GuideSection>
-    <GuideSection class="guideSection" title="Event Propagation">
+    <!-- <GuideSection class="guideSection" title="Event Propagation">
     
     </GuideSection>
     <GuideSection class="guideSection" title="Key & Mouse Modifiers">
     
-    </GuideSection>
-    <GuideSection class="guideSection" title="Conditional Rendering">
-      <ConditionalRendering slot="content" />
-    </GuideSection>
-    <GuideSection class="guideSection" title="Rendering List via Looping (v-for)">
+    </GuideSection> -->
+    <!-- <GuideSection class="guideSection" title="Conditional Rendering">
 
+    </GuideSection> -->
+    <GuideSection class="guideSection" title="Rendering List via Looping (v-for)">
+      <ConditionalRendering slot="content" />
     </GuideSection>
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
   </main>

@@ -1,6 +1,10 @@
 <template>
     <div id="conditionalRendering" class="contentBox" slot="content">
         <!-- v-for to generate HTML from an array of objects -->
+        <p>An HTML element can be rendered via a loop by using "v-for". This allows us to write the template for the item once (e.g., ".fishBox" below).
+            Then, we can loop through either an array or an object's properties from the component's data object. For arrays, the index can be accessed via an optional 
+            second argument, which can be named any standard string, but is usually called "i" or "index".
+        </p>
         <h3>Fish list with css grid</h3>
         <div class="fishBox" v-for="(fish, i) in fishes">
             <span>{{i}}</span>
@@ -10,7 +14,15 @@
             <!-- v-binding style causes the style to become jabascript that accepts two parameters ('style to be changed', 'value of the change') -->
         </div>
 
+        
         <h3>Cities list with css flexbox</h3>
+        <p>The output below is the result of template loop nesting via "v-for". The data property "locations" is an array of objects, where each object has two key-value pairings:
+            <ol>
+                <li>country name via "country"</li>
+                <li>major cities via the array "majorCities"</li>
+            </ol>
+            What's more, the index value is captured while looping through the cities, and is handed to a span that then defines a medal based on the index position.
+        </p>
         <div id="majorCities">
             <div class="countries" v-for="location in locations">
                 <span class="countryName">{{location.country}}</span>
