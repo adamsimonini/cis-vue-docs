@@ -80,33 +80,6 @@ button:nth-child(odd){
 .toggle-button:hover{
     cursor: pointer;
 }
-.fishIcon{
-
-}
-.fishColor{
-    width: 30px;
-    height: 30px;
-    background-color: orange;
-}
-.fishBox{
-    display: grid;
-    grid-template-columns: 20px 30px 1fr 30px;
-    grid-template-rows: auto;
-    grid-gap: 1px;
-    max-width: 300px
-}
-.fishName{
-    font-weight: 600;
-}
-.cityList{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    background-color: #f9f9f9;
-}
-.countryName{
-    font-weight: 900;
-}
 .contentBox{
     margin-left: 5%;
 }

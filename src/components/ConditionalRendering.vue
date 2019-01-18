@@ -1,78 +1,56 @@
 <template>
     <div id="conditionalRendering" class="contentBox" slot="content">
-        <!-- v-for to generate HTML from an array of objects -->
-        <p>An HTML element can be rendered via a loop by using "v-for". This allows us to write the template for the item once (e.g., ".fishBox" below).
-            Then, we can loop through either an array or an object's properties from the component's data object. For arrays, the index can be accessed via an optional 
-            second argument, which can be named any standard string, but is usually called "i" or "index".
-        </p>
-        <h3>Fish list with css grid</h3>
-        <div class="fishBox" v-for="(fish, i) in fishes">
-            <span>{{i}}</span>
-            <span class="fishIcon">&#x1f41f;</span>
-            <span>Name: <span class="fishName">{{fish.name}}</span></span>
-            <span v-bind:style="{'background-color': fish.color}" class="fishColor">&nbsp;&nbsp;&nbsp;&nbsp;</span>
-            <!-- v-binding style causes the style to become jabascript that accepts two parameters ('style to be changed', 'value of the change') -->
-        </div>
-
-        
-        <h3>Cities list with css flexbox</h3>
-        <p>The output below is the result of template loop nesting via "v-for". The data property "locations" is an array of objects, where each object has two key-value pairings:
-            <ol>
-                <li>country name via "country"</li>
-                <li>major cities via the array "majorCities"</li>
-            </ol>
-            What's more, the index value is captured while looping through the cities, and is handed to a span that then defines a medal based on the index position.
-        </p>
-        <div id="majorCities">
-            <div class="countries" v-for="location in locations">
-                <span class="countryName">{{location.country}}</span>
-                <div class="cityList">
-                    <span class="cityName" v-for="(majorCity, i) in location.majorCities">{{i + 1}} {{majorCity}} <span v-html="medal[i]"></span></span>
-                </div>
-                <!-- v-binding style causes the style to become jabascript that accepts two parameters ('style to be changed', 'value of the change') -->
-            </div>
-        </div>
+        <h3>Conditional rendering directives</h3>
+        <p>v-if & v-else evalues truthiness of an assertion (e.g., "1 == 1"). Note, each time the value changes, <b>the element and all child nodes are destoryed and re-created</b> 
+            which can affect performance. Also noteworthly, the element is not automatically rendered with v-if; it's only rendered when the assertion evaluates to truthy</p>
+        <button 
+            class="toggle-button"
+            @click="toggleValue"
+            v-if="(toggler % 2 == 0)">
+            Even {{toggler}}
+        </button>
+        <button 
+            class="toggle-button"
+            @click="toggleValue"
+            v-if="(toggler % 2 == 1)">
+            Odd {{toggler}}
+        </button>
+        <!-- v-show sets the CSS display property, as opposed to junking the element; and the element is always rendered -->
+        <span v-show="(toggler % 2 == 1)">Using v-show, I only show when the toggler is set to 'odd'</span>
+        <p>For content that needs to be toggled on/off continually, v-show is best. If the element never changes after being shown, v-if is best (as it may not be rendered at runtime, and so can incrase efficiency)</p>
+        <h3>Render Lists Via Looping (v-for)</h3>
+        <input type="number" v-model.number="listSize" @blur="generateList()" @enter="generateList()" placeholder="enter a number"/>
+        <br /><br />
+        <ol id="dynamicList" v-show="listSize > 0">
+            <li v-for="items in list">
+                <= list number | index number => {{num}}
+            </li>
+        </ol>
     </div>
 </template>
 
 <script>
 
 export default {
-  name: 'TwoWayBinding',
+  name: 'TemplateLooping',
   props: [''],
   data: function() {
         return {
-            fishes: [
-                {name: 'Goldfish', color: 'orange'},
-                {name: 'Deepwater Redfish', color: 'pink'},
-                {name: 'Carp', color: 'yellow'},
-                {name: 'Iridescent Shark', color: 'black'},
-                {name: 'Siamese', color: 'blue'},
-                {name: 'Southern Platyfish', color: 'teal'},
-            ],
-            locations: [
-                {   
-                    country: 'Canada',
-                    majorCities: ['Toronto', 'Montreal', 'Vancouver']
-                },
-                {   
-                    country: 'Mexico',
-                    majorCities: ['Mexico City', 'Ecatepec', 'Guadalajara']
-                },
-                {   
-                    country: 'USA',
-                    majorCities: ['New York', 'Los Angeles', 'Chicago']
-                },
-            ],
-            medal: ['&#x1f947;', '&#x1f948', '&#x1f949'],
+            toggler: 2,
+            listSize: 0,
+            listNumber: 0,
+            list: [],
         }
   },
   methods: {
-        logThisInstead: function(){
-            console.log("%c Form submission was successfully prevented, and THIS function was run, instead! :)", "color: limegreen;");
+        toggleValue: function(){
+            this.toggler++;
         },
-        logMe: function(){
-            console.log(this);
+        generateList: function(){
+            for(var i=0; i < this.listSize; i++ ){
+                this.listNumber++;
+                this.list[i] = i;
+            }
         },
     }
 }

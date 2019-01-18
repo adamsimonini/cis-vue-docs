@@ -12,4 +12,3 @@ new Vue({
     chart: '../assets/vue-modifiers.jpg',
   }
 }).$mount('#app')
-

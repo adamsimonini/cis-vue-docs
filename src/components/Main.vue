@@ -10,11 +10,11 @@
     <GuideSection class="guideSection" title="Key & Mouse Modifiers">
     
     </GuideSection> -->
-    <!-- <GuideSection class="guideSection" title="Conditional Rendering">
-
-    </GuideSection> -->
-    <GuideSection class="guideSection" title="Rendering List via Looping (v-for)">
+    <GuideSection class="guideSection" title="Conditional Rendering">
       <ConditionalRendering slot="content" />
+    </GuideSection>
+    <GuideSection class="guideSection" title="Rendering List via Looping (v-for)">
+      <TemplateLooping slot="content" />
     </GuideSection>
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
   </main>
@@ -23,6 +23,7 @@
 <script>
 import GuideSection from './GuideSection.vue';
 import TwoWayBinding from './TwoWayBinding.vue';
+import TemplateLooping from './TemplateLooping.vue';
 import ConditionalRendering from './ConditionalRendering.vue';
 
 export default {
@@ -30,6 +31,7 @@ export default {
   components: {
     GuideSection,
     TwoWayBinding,
+    TemplateLooping,
     ConditionalRendering,
   },  
   data: function(){
