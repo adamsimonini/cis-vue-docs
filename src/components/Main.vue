@@ -1,6 +1,6 @@
 <template>
   <main id='main'>
-    <h1>Advanced Vue Guidebook & Sandbox</h1>
+    <h1>Advanced's Vue Guidebook & Sandbox</h1>
     <GuideSection class="guideSection" title="Two-Way Binding">
       <TwoWayBinding slot="content" />
     </GuideSection>
