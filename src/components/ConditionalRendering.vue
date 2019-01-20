@@ -1,5 +1,5 @@
 <template>
-    <div id="conditionalRendering" class="contentBox" slot="content">
+    <div id="conditionalRendering" class="contentBox">
         <h3>Conditional rendering directives</h3>
         <!-- v-show sets the CSS display property, as opposed to junking the element; and the element is always rendered -->
         <p>V-cloak, along with the appropriate css, can hide the placeholder for a variable from showing up when the Vue app is taking a long time to load (e.g., over a slow network connection</p>

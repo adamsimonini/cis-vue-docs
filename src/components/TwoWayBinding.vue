@@ -1,5 +1,5 @@
 <template>
-    <div id="twoWay" class="contentBox" slot="content">
+    <div id="twoWay" class="contentBox">
         <h3>Bypass default event behaviour with ".prevent" modifier</h3>
           <p>v-on:click.prevent="myFunction" OR @click.prevent="myFunction" will stop the default action of the element and instead run the provided function. Check console logs.</p>
           <button style="" type="submit" @click.prevent="logThisInstead">Prevent my default</button>

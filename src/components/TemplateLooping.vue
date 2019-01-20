@@ -1,5 +1,5 @@
 <template>
-    <div id="templateLooping" class="contentBox" slot="content">
+    <div id="templateLooping" class="contentBox">
         <h3>Render Lists Via Looping (v-for)</h3>
         <input type="number" v-model.number="listSize" @blur="generateList()" @enter="generateList()" placeholder="enter a number"/>
         <br /><br />
