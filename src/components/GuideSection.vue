@@ -43,6 +43,6 @@ export default {
 }
 .sectionTitle:hover{
     cursor: pointer;
-    color: purple;
+    color: var(--primaryColor);
 }
 </style>
