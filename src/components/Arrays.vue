@@ -1,7 +1,5 @@
 <template>
     <div id="arrays" class="contentBox">
-        <h3>Detecting Array Changes</h3>
-        <img src="../assets/array-mutation.jpg" />
         <div class="infoCitation">
             <h4>Plurasite</h4>
             <p>Module 6: Conditional Rendering and Rendering of Lists</p>
@@ -40,6 +38,7 @@
             <br /><br />
             **Vue cannot deted updates to individual array elements**
         </p>
+        <img src="../assets/array-mutation.jpg" />
     </div>
 </template>
 

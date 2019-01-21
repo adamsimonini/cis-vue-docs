@@ -16,14 +16,20 @@
         <GuideSection class="guideSection" title="Array Mutation">
             <Arrays slot="content" />
         </GuideSection>
-        <GuideSection class="guideSection" title="Reacting to Data Changes">
+        <GuideSection class="guideSection" title="Reacting to Data Changes (watchers)">
             <DataChange slot="content" />
+        </GuideSection>
+        <GuideSection class="guideSection" title="Computed Properties">
+            <ComputedProperties slot="content" />
+        </GuideSection>
+        <GuideSection class="guideSection" title="Filters">
+            <Filters slot="content" />
         </GuideSection>
     </div>
     <h2>Displayed via Routing</h2>
     <div>
         <router-link class="routerLink" to="/binding">
-            <h2>Two-Way Binding</h2>
+            <h2>Data Binding & Two-Way Binding</h2>
         </router-link>
         <router-link class="routerLink" to="/">
             <span>Close</span>
@@ -46,6 +52,8 @@ import TemplateLooping from './TemplateLooping.vue';
 import ConditionalRendering from './ConditionalRendering.vue';
 import Arrays from './Arrays.vue';
 import DataChange from './DataChange.vue';
+import ComputedProperties from './ComputedProperties.vue';
+import Filters from './Filters.vue';
 
 export default {
   name: 'Main',
@@ -56,6 +64,8 @@ export default {
     ConditionalRendering,
     Arrays,
     DataChange,
+    ComputedProperties,
+    Filters,
   },  
   data: function(){
     return {
