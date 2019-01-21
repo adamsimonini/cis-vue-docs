@@ -20,9 +20,15 @@ button{
     text-align: center;
     border: 2px solid purple;
     background-color: white;
-    padding: 20px;;
+    padding: 20px;
+    margin: 0 10px;
     border-radius: 10px;
+
 }
+.testCase{
+    background-color: #f9f9f9;
+}
+
 button:hover{
     cursor: pointer;
     border: 2px solid skyblue;
