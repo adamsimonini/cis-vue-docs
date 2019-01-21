@@ -9,12 +9,12 @@
             </li>
         </ol>
 
+        <h3>Fish list with css grid</h3>
         <!-- v-for to generate HTML from an array of objects -->
         <p>An HTML element can be rendered via a loop by using "v-for". This allows us to write the template for the item once (e.g., ".fishBox" below).
             Then, we can loop through either an array or an object's properties from the component's data object. For arrays, the index can be accessed via an optional 
             second argument, which can be named any standard string, but is usually called "i" or "index".
         </p>
-        <h3>Fish list with css grid</h3>
         <div class="fishBox" v-for="(fish, i) in fishes">
             <span>{{i}}</span>
             <span class="fishIcon">&#x1f41f;</span>

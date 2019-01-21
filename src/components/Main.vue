@@ -13,6 +13,12 @@
         <GuideSection class="guideSection" title="Rendering List via Looping (v-for)">
             <TemplateLooping slot="content" />
         </GuideSection>
+        <GuideSection class="guideSection" title="Array Mutation">
+            <Arrays slot="content" />
+        </GuideSection>
+        <GuideSection class="guideSection" title="Reacting to Data Changes">
+            <DataChange slot="content" />
+        </GuideSection>
     </div>
     <h2>Displayed via Routing</h2>
     <div>
@@ -38,6 +44,8 @@ import GuideSection from './GuideSection.vue';
 import Propagation from './Propagation.vue';
 import TemplateLooping from './TemplateLooping.vue';
 import ConditionalRendering from './ConditionalRendering.vue';
+import Arrays from './Arrays.vue';
+import DataChange from './DataChange.vue';
 
 export default {
   name: 'Main',
@@ -46,6 +54,8 @@ export default {
     Propagation,
     TemplateLooping,
     ConditionalRendering,
+    Arrays,
+    DataChange,
   },  
   data: function(){
     return {

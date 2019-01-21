@@ -53,6 +53,9 @@ button:nth-child(odd){
     background: pink !important;
 
 }
+.infoCitation{
+    background-color: #f3eded;
+}
 .width-box{
     display: flex;
     justify-content: space-around;
