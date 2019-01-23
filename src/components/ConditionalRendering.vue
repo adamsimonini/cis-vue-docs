@@ -6,6 +6,7 @@
         <p v-cloak>I'm only visible when the instance of Vue has fully loaded</p>
         <p>v-if & v-else evalues truthiness of an assertion (e.g., "1 == 1"). Note, each time the value changes, <b>the element and all child nodes are destoryed and re-created</b> 
             which can affect performance. Also noteworthly, the element is not automatically rendered with v-if; it's only rendered when the assertion evaluates to truthy</p>
+        <p>v-else-if is also available starting in 2.1.0</p>
         <button 
             class="toggle-button"
             @click="toggleValue"
@@ -20,6 +21,7 @@
         </button>
         <span v-show="(toggler % 2 == 1)">Using v-show, I only show when the toggler is set to 'odd'</span>
         <p>For content that needs to be toggled on/off continually, v-show is best. If the element never changes after being shown, v-if is best (as it may not be rendered at runtime, and so can incrase efficiency)</p>
+        
     </div>
 </template>
 
