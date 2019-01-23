@@ -8,7 +8,7 @@
         <!-- <h4>sub</h4> -->
         <p>When operations happen within the template, a few problems can arise:
             <ul>
-                <li>a. the operation is difficult to read, and takes time to understand it's purpose (e.g., '{ message.split('').reverse().join('') }')</li>
+                <li>a. the operation is difficult to read, and takes time to understand its purpose (e.g., '{ message.split('').reverse().join('') }')</li>
                 <li>b. code becomes less tidy, especially if the operation is used in mutliple places</li>
                 <li>c. perforamnce suffers as the operation isn't cached, and is done anew each time it's employed</li>
             </ul>

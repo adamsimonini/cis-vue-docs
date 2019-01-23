@@ -25,6 +25,9 @@
         <GuideSection class="guideSection" title="Filters">
             <Filters slot="content" />
         </GuideSection>
+        <GuideSection class="guideSection" title="Vue CLI">
+            <VueCLI slot="content" />
+        </GuideSection>
     </div>
     <h2>Displayed via Routing</h2>
     <div>
@@ -54,6 +57,7 @@ import Arrays from './Arrays.vue';
 import DataChange from './DataChange.vue';
 import ComputedProperties from './ComputedProperties.vue';
 import Filters from './Filters.vue';
+import VueCLI from './VueCLI.vue';
 
 export default {
   name: 'Main',
@@ -66,6 +70,7 @@ export default {
     DataChange,
     ComputedProperties,
     Filters,
+    VueCLI,
   },  
   data: function(){
     return {

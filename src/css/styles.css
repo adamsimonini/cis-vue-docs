@@ -1,6 +1,7 @@
 /* CSS Variable */
 :root {
     --primaryColor: purple; 
+    --secondaryColor: #df5eff;
 }
   
 #app{
