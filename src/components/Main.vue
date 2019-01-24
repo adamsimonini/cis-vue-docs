@@ -48,6 +48,12 @@
         </router-link>
         <router-view></router-view>
     </div>
+    <h2>VSCode Extensions & Tooling</h2>
+    <div>
+        <GuideSection class="guideSection" title="VSCode Extensions">
+            <Extensions slot="content" />
+        </GuideSection>
+    </div>
     <!-- <GuideSection class="guideSection" title="Event Propagation">
     
     </GuideSection>
@@ -70,6 +76,7 @@ import VueCLI from './VueCLI.vue';
 import ComponentFrameworks from './ComponentFrameworks.vue';
 import VueRouter from './VueRouter.vue';
 import Vuex from './Vuex.vue';
+import Extensions from './Extensions.vue';
 
 export default {
   name: 'Main',
@@ -86,6 +93,7 @@ export default {
     ComponentFrameworks,
     VueRouter,
     Vuex,
+    Extensions,
   },  
   data: function(){
     return {
@@ -99,5 +107,11 @@ export default {
 #main > div {
   border-left: 1px solid var(--primaryColor);
   padding-left: 5%;
+}
+h1{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 3rem;
+    color: var(--primaryColor);
+    font-weight: 300;
 }
 </style>
