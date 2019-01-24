@@ -4,6 +4,9 @@
     <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
     <h2>Displayed via Conditional Rendering</h2>
     <div>
+        <GuideSection class="guideSection" title="UI Framework Comparison">
+            <ComponentFrameworks slot="content" />
+        </GuideSection>
         <GuideSection class="guideSection" title="Event Propagation">
             <Propagation slot="content" />
         </GuideSection>
@@ -27,6 +30,12 @@
         </GuideSection>
         <GuideSection class="guideSection" title="Vue CLI">
             <VueCLI slot="content" />
+        </GuideSection>
+        <GuideSection class="guideSection" title="Vue Router">
+            <VueRouter slot="content" />
+        </GuideSection>
+        <GuideSection class="guideSection" title="Vuex">
+            <Vuex slot="content" />
         </GuideSection>
     </div>
     <h2>Displayed via Routing</h2>
@@ -58,6 +67,9 @@ import DataChange from './DataChange.vue';
 import ComputedProperties from './ComputedProperties.vue';
 import Filters from './Filters.vue';
 import VueCLI from './VueCLI.vue';
+import ComponentFrameworks from './ComponentFrameworks.vue';
+import VueRouter from './VueRouter.vue';
+import Vuex from './Vuex.vue';
 
 export default {
   name: 'Main',
@@ -71,6 +83,9 @@ export default {
     ComputedProperties,
     Filters,
     VueCLI,
+    ComponentFrameworks,
+    VueRouter,
+    Vuex,
   },  
   data: function(){
     return {
