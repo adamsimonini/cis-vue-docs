@@ -4,8 +4,8 @@
         <input type="number" v-model.number="listSize" @blur="generateList()" @enter="generateList()" placeholder="enter a number"/>
         <br /><br />
         <ol id="dynamicList" v-show="listSize > 0">
-            <li v-for="items in list">
-                <= list number | index number => {{num}}
+            <li v-for="(item, i) in list" v-bind:key="item.id">
+                = list number | index number = {{i}}
             </li>
         </ol>
 
@@ -15,7 +15,7 @@
             Then, we can loop through either an array or an object's properties from the component's data object. For arrays, the index can be accessed via an optional 
             second argument, which can be named any standard string, but is usually called "i" or "index".
         </p>
-        <div class="fishBox" v-for="(fish, i) in fishes">
+        <div class="fishBox" v-for="(fish, i) in fishes" v-bind:key="fish.id">
             <span>{{i}}</span>
             <span class="fishIcon">&#x1f41f;</span>
             <span>Name: <span class="fishName">{{fish.name}}</span></span>
@@ -32,10 +32,10 @@
             What's more, the index value is captured while looping through the cities, and is handed to a span that then generates a medal based on the index position.
         </p>
         <div id="majorCities">
-            <div class="countries" v-for="location in locations">
+            <div class="countries" v-for="location in locations" v-bind:key="location.id">
                 <span class="countryName">{{location.country}}</span>
                 <div class="cityList">
-                    <span class="cityName" v-for="(majorCity, i) in location.majorCities">{{i + 1}}. {{majorCity}} <span v-html="medal[i]"></span></span>
+                    <span class="cityName" v-for="(majorCity, i) in location.majorCities" v-bind:key="majorCity.id">{{i + 1}}. {{majorCity}} <span v-html="medal[i]"></span></span>
                 </div>
                 <!-- v-binding style causes the style to become jabascript that accepts two parameters ('style to be changed', 'value of the change') -->
             </div>

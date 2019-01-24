@@ -1,7 +1,7 @@
 <template>
     <div id="componentFrameworks" class="contentBox">
         <h3>List of Frameworks</h3>
-        <div class="frameworkRow" v-for="framework in list">
+        <div class="frameworkRow" v-for="framework in list" v-bind:key="framework.id">
             <span><b>{{framework.name}}</b></span>
             <span>{{framework.layout}}</span>
             <a :href="framework.url" target="_blank">Product Website</a>
