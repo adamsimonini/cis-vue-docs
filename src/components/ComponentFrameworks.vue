@@ -8,6 +8,18 @@
             <a :href="framework.github" target="_blank">Git Repo</a>
             <span>{{framework.support}}</span>
         </div>
+
+        <h3>DevExpress</h3>
+        <h4>Data Binding</h4>
+        <a href="https://codesandbox.io/s/w6371j7z48">Data Grid in Vue:</a>
+        <a href="https://codesandbox.io/s/6vkn4zknjw">Custom Data Source</a>
+        <a href="https://js.devexpress.com/Demos/WidgetsGallery/Demo/DataGrid/WebAPIService/Vue/Light/">Web API Services</a>
+        <a href="https://js.devexpress.com/Demos/WidgetsGallery/Demo/DataGrid/SignalRService/Vue/Light/">Realtime Data</a>
+        <h4>Paging & Scrolling</h4>
+        <a href="https://codesandbox.io/s/53323vk09l">Remote Virtual Scrolling</a>
+        <h4>Editing</h4>
+        <a href="https://codesandbox.io/s/13n5lmymp3">Editing a row</a>
+        <a href="https://codesandbox.io/s/wrmqq8m95">Batch editing</a>
     </div>
 </template>
 
@@ -45,5 +57,11 @@ div a{
     margin: 10px 0;
     display: flex;
     justify-content: flex-start;
+}
+#componentFrameworks{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 </style>
