@@ -24,6 +24,7 @@
             <h4>Official Vue CLI Docs</h4>
             <a href="https://cli.vuejs.org/" target="_blank">Link to primary source</a>
         </div>
+        <p>With the CLI, presets for creating apps can be customized, saved, and shared (e.g., sharing via github)</p>
     </div>
 </template>
 

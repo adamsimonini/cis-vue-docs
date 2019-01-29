@@ -1,7 +1,7 @@
 <template>
     <div class='guideSection'>
         <h2 class="sectionTitle" @click="showContent()">{{title}}</h2>
-        <div v-show="(toggler) % 2 == 0">
+        <div class="innerBox" v-show="(toggler) % 2 == 0">
             <slot name="content"></slot>
         </div>
     </div>
@@ -44,5 +44,8 @@ export default {
 .sectionTitle:hover{
     cursor: pointer;
     color: var(--primaryColor);
+}
+.innerBox{
+    border-left: 1px solid var(--primaryColor);
 }
 </style>
