@@ -4,6 +4,9 @@
     <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
     <h2>Displayed via Conditional Rendering</h2>
     <div>
+        <GuideSection class="guideSection" title="UI Framework Comparison">
+            <ComponentFrameworks slot="content" />
+        </GuideSection>
         <GuideSection class="guideSection" title="Event Propagation">
             <Propagation slot="content" />
         </GuideSection>
@@ -28,6 +31,12 @@
         <GuideSection class="guideSection" title="Vue CLI">
             <VueCLI slot="content" />
         </GuideSection>
+        <GuideSection class="guideSection" title="Vue Router">
+            <VueRouter slot="content" />
+        </GuideSection>
+        <GuideSection class="guideSection" title="Vuex">
+            <Vuex slot="content" />
+        </GuideSection>
     </div>
     <h2>Displayed via Routing</h2>
     <div>
@@ -38,6 +47,12 @@
             <span>Close</span>
         </router-link>
         <router-view></router-view>
+    </div>
+    <h2>VSCode Extensions & Tooling</h2>
+    <div>
+        <GuideSection class="guideSection" title="VSCode Extensions">
+            <Extensions slot="content" />
+        </GuideSection>
     </div>
     <!-- <GuideSection class="guideSection" title="Event Propagation">
     
@@ -58,6 +73,10 @@ import DataChange from './DataChange.vue';
 import ComputedProperties from './ComputedProperties.vue';
 import Filters from './Filters.vue';
 import VueCLI from './VueCLI.vue';
+import ComponentFrameworks from './ComponentFrameworks.vue';
+import VueRouter from './VueRouter.vue';
+import Vuex from './Vuex.vue';
+import Extensions from './Extensions.vue';
 
 export default {
   name: 'Main',
@@ -71,6 +90,10 @@ export default {
     ComputedProperties,
     Filters,
     VueCLI,
+    ComponentFrameworks,
+    VueRouter,
+    Vuex,
+    Extensions,
   },  
   data: function(){
     return {
@@ -84,5 +107,11 @@ export default {
 #main > div {
   border-left: 1px solid var(--primaryColor);
   padding-left: 5%;
+}
+h1{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 3rem;
+    color: var(--primaryColor);
+    font-weight: 300;
 }
 </style>
