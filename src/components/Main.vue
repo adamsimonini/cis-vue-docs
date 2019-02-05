@@ -37,6 +37,9 @@
         <GuideSection class="guideSection" title="Vuex">
             <Vuex slot="content" />
         </GuideSection>
+        <GuideSection class="guideSection" title="Dynamic Component">
+            <dynamic-component slot="content" />
+        </GuideSection>
     </div>
     <h2>Displayed via Routing</h2>
     <div>
@@ -77,6 +80,7 @@ import ComponentFrameworks from './ComponentFrameworks.vue';
 import VueRouter from './VueRouter.vue';
 import Vuex from './Vuex.vue';
 import Extensions from './Extensions.vue';
+import DynamicComponent from './DynamicComponent.vue';
 
 export default {
   name: 'Main',
@@ -94,6 +98,7 @@ export default {
     VueRouter,
     Vuex,
     Extensions,
+    DynamicComponent,
   },  
   data: function(){
     return {
